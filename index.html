@@ -10,7 +10,155 @@
     <link rel="stylesheet" href="/assets/styles/header.css">
     <link rel="stylesheet" href="/assets/styles/main.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+      /* Reset CSS Moderno */
+
+/* Remove margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Melhora a legibilidade e a renderização do texto */
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    scroll-behavior: smooth;
+  }
+  
+  /* Remove estilos padrão em listas */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Remove estilos padrão de links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Ajusta a exibição de elementos semânticos */
+  article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+    display: block;
+  }
+  
+  /* Corrige a herança de fontes */
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Remove estilos padrão de botões */
+  button, input, select, textarea {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  /* Garante que imagens não ultrapassem o container */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Remove estilos padrão de tabelas */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Evita que iframes e embeds extrapolem o layout */
+  iframe, embed, object {
+    max-width: 100%;
+  }
+  
+  /* Ajusta a altura mínima para 100vh */
+  html, body {
+    min-height: 100vh;
+  }
+
+
+body{
+    background-color: #ede8de;
+    }
     
+.navbar{
+    font-family: "Lato", serif;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    padding: 20px;
+    }
+    
+.navbar-brand{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 10px;
+    }
+
+        @media screen and (min-width: 990px) {
+            #navbarNav{
+            display: flex;
+            justify-content: center;
+            margin-right: 150px;
+        }
+    }
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+
+    div{
+        text-align: center;
+
+        padding: 20px;
+        width: 80%;
+
+        h2{
+            font-family: "Inter", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: italic;
+            font-size: large;
+        }
+
+        h2::after{
+            font-size: 18px;
+            content: '|';
+            margin-left: 2px;
+            opacity: 1;
+            animation: pisca .7s infinite;
+        }
+    }
+}
+
+@keyframes pisca{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+  
+
+    </style>
 </head>
 <body>
     <header class="cabecalho">
@@ -45,7 +193,19 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<script src="/assets/scripts/main.js
-"></script>
+<script>
+  const titulo = document.querySelector('h2')
+
+function typeWrite(elemento){
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    textoArray.forEach((letra, i) => {
+        setTimeout(() => elemento.innerHTML += letra, 65 * i)
+    });
+    console.log(textoArray)
+}
+
+typeWrite(titulo)
+</script>
 </body>
 </html>
