@@ -1,0 +1,75 @@
+/* Reset CSS Moderno */
+
+/* Remove margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Melhora a legibilidade e a renderização do texto */
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    scroll-behavior: smooth;
+  }
+  
+  /* Remove estilos padrão em listas */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Remove estilos padrão de links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Ajusta a exibição de elementos semânticos */
+  article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+    display: block;
+  }
+  
+  /* Corrige a herança de fontes */
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Remove estilos padrão de botões */
+  button, input, select, textarea {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  /* Garante que imagens não ultrapassem o container */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Remove estilos padrão de tabelas */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Evita que iframes e embeds extrapolem o layout */
+  iframe, embed, object {
+    max-width: 100%;
+  }
+  
+  /* Ajusta a altura mínima para 100vh */
+  html, body {
+    min-height: 100vh;
+  }
+  

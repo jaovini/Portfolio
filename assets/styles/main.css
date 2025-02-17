@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+
+    div{
+        text-align: center;
+
+        padding: 20px;
+        width: 80%;
+
+        h2{
+            font-family: "Inter", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: italic;
+            font-size: large;
+        }
+
+        h2::after{
+            font-size: 18px;
+            content: '|';
+            margin-left: 2px;
+            opacity: 1;
+            animation: pisca .7s infinite;
+        }
+    }
+}
+
+@keyframes pisca{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
