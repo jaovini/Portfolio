@@ -14,6 +14,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+
     <style>
       /* Reset CSS Moderno */
 
@@ -22,6 +30,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
   }
   
   /* Melhora a legibilidade e a renderização do texto */
@@ -94,6 +106,13 @@
 body{
     background-color: #ede8de;
     }
+
+header{
+  background-color: #ede8de ;
+  z-index: 2;
+  top: 0px;
+  position: sticky;
+}
     
 .navbar{
     font-family: "Lato", serif;
@@ -117,14 +136,17 @@ body{
             margin-right: 150px;
         }
     }
+    
 
 main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    div{
+    .apresentacao{
+      height: calc(100vh - 36vh);
+        margin-top: 20vh;
         text-align: center;
 
         padding: 20px;
@@ -148,6 +170,7 @@ main{
     }
 }
 
+
 @keyframes pisca{
     0%, 100%{
         opacity: 1;
@@ -156,13 +179,76 @@ main{
         opacity: 0;
     }
 }
-  
+
+    .stack{
+      padding: 5px;
+
+
+
+      ul{
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      margin-bottom: 25px;
+      text-align: center;
+      gap: 30px;
+
+        .icon{
+        width: 55px;
+        height: 55px;
+      }
+    } 
+  }
+
+
+  li{
+    transition: .35s ease-in-out;
+    cursor: pointer;
+  }
+
+  li:hover{
+      transform: scale(1.2);
+    }
+
+    h3{
+        display: none;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+      }
+
+    @media screen and (max-width: 990px) {
+
+      .stack{
+        margin-right: 30px;
+      }
+        ul{
+
+          flex-direction: column;
+        }
+
+        h3{
+          display: block;
+        }
+
+        .icon{
+          margin: auto;
+          margin-left: 30vw;
+        }
+
+        ul{
+          margin-top: 350px;
+        }
+
+      }
+      
+
+
 
     </style>
 </head>
 <body>
     <header class="cabecalho">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg border-secondary rounded-end">
             <div class="container-fluid">
               <h1 class="navbar-brand" href="#">J.Vinícius</h1>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -176,6 +262,9 @@ main{
                   <li class="nav-item">
                     <a class="nav-link" href="#">Trabalhos</a>
                   </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="#">Skills</a>
+                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Profissão</a>
                   </li>
@@ -186,8 +275,58 @@ main{
     </header>
 
     <main>
-      <div>
+      
+      <div class="apresentacao">
         <h2>Me chamo João Vinícius, sou desenvolvedor Front-end e UI Designer, técnico em informática e apaixonado por hardwares e eletrônica.</h2>
+      </div>
+
+      <div class="stack">
+
+        <ul class="linguagens">
+          <h3 class="categoria">Linguagens de Progamação</h3>
+          <li title="JavaScript" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
+          </li>
+          <li title="TypeScript" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
+          </li>
+          <li title="Python" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+          </li>
+          <li title="C++" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg" />
+          </li>
+        </ul>
+        
+        <ul class="frameworks_e_tools">
+          <h3 class="categoria">Frameworks e Ferramentas</h3>
+          <li class="icon">
+            <img title="Postgresql" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg" />
+          </li>
+          <li class="icon">
+            <img title="React" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+          </li>
+          <li class="icon">
+            <img title="Django" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" />
+          </li>
+          <li title="Next.js" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-plain.svg" />
+          </li>
+          <li title="Node.js" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain.svg" />
+          </li>
+          <li title="Tailwind CSS" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+          </li>
+          <li title="Figma" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+          </li>
+          <li title="Sass" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />
+          </li>
+        </ul>
+
+
       </div>
     </main>
 
