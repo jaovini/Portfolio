@@ -186,8 +186,6 @@ main{
 }
 
     .stack{
-      padding: 5px;
-
 
 
       ul{
@@ -196,7 +194,7 @@ main{
       margin: auto;
       margin-bottom: 25px;
       text-align: center;
-      gap: 30px;
+      gap: 50px;
 
         .icon{
         width: 55px;
@@ -207,7 +205,7 @@ main{
 
 
   li{
-    cursor: pointer;
+   
   }
 
     h3{
@@ -216,10 +214,11 @@ main{
         text-transform: uppercase;
       }
 
-    @media screen and (max-width: 990px) {
+    @media screen and (max-width: 700px) {
 
       .stack{
         margin-right: 30px;
+
       }
         ul{
 
@@ -232,7 +231,7 @@ main{
 
         .icon{
           margin: auto;
-          margin-left: 30vw;
+          
         }
 
         ul{
@@ -253,11 +252,129 @@ main{
         }
       }
       
+      li{
+    transition: .35s ease-in-out;
+
+  }
+  li:hover{
+      transform: scale(1.2);
+    }
+      
       @media screen and (max-width:500px) {
           .apresentacao_texto{
             margin: 60px;
         }
       }
+
+      #php{
+        font-size: 58px;
+      }
+
+      [title]:hover::after {
+        text-align: center;
+    padding: 100px;
+    content: attr(title);
+    background: #444;
+    color: white;
+    padding: 6px;
+    width: 100px;
+    position: absolute;
+    transform: translateY(5px);
+    border-radius: 5px;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+  gap: 50px;
+}
+
+@media screen and (max-width:780px) {
+  .cards{
+    flex-direction: column;
+  }
+}
+
+.cards_card{
+  transition: 0.3s ease-in;
+  border-radius: 25px;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  margin-bottom: 100px;
+  background-color: #f1f1f1;
+}
+
+.cards_card:hover{
+  background-color: #333;
+  transform: scale(1.03);
+  color: white;
+}
+
+.cards_card:hover .cards__card_icon{
+  background-color: white;
+  transform: scale(1.04);
+}
+
+.cards_card:hover .bi-arrow-right{
+  animation: setinha infinite .7s ease-in;
+}
+
+
+
+.cards__card_icon{
+  margin-bottom: 15px;
+  transition: .3s ease-in;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  padding: 10px;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+span{
+  cursor: pointer;
+  bottom: 30px;
+}
+
+.bi-arrow-right{
+  margin-left: 5px;
+}
+
+@keyframes setinha{
+  0%, 100%{
+    margin-left: 5px;
+  }
+  50%{
+    margin-left: 10px;
+  }
+}
+
+.icon{
+  img{
+    width: 48px;
+
+    @media screen and (max-width: 600px) {
+      width: 100px;
+    }
+  }
+}
+
+.divs-facilidades{
+
+  @media screen and (max-width: 768px) {
+    margin-right: 80px;
+    margin-left: 100px;
+    width: 50vh;
+  }
+}
+
+
 
 
     </style>
@@ -279,10 +396,10 @@ main{
                     <a class="nav-link" href="#">Trabalhos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Skills</a>
+                    <a class="nav-link" href="#">Projetos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Profissão</a>
+                    <a class="nav-link" href="#">Entre em contato</a>
                   </li>
                 </ul>
               </div>
@@ -293,63 +410,14 @@ main{
     <main>
       
       <div class="apresentacao">
-        <h2>Me chamo João Vinícius, sou desenvolvedor Front-end e UI Designer, técnico em informática e apaixonado por hardwares e eletrônica.</h2>
+        <h2>Me chamo João Vinícius, sou desenvolvedor Front-end e UI Designer, técnico em informática e apaixonado por hardwares e Redes de Computadores.</h2>
 
       </div>
-      
-
-      <!-- <div class="stack">
-
-        <ul class="linguagens">
-          <h3 class="categoria">Linguagens de Progamação</h3>
-          <li title="JavaScript" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
-          </li>
-          <li title="TypeScript" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
-          </li>
-          <li title="Python" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-          </li>
-          <li title="C++" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-plain.svg" />
-          </li>
-        </ul>
-        
-        <ul class="frameworks_e_tools">
-          <h3 class="categoria">Frameworks e Ferramentas</h3>
-          <li class="icon">
-            <img title="Postgresql" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain.svg" />
-          </li>
-          <li class="icon">
-            <img title="React" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
-          </li>
-          <li class="icon">
-            <img title="Django" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" />
-          </li>
-          <li title="Next.js" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-plain.svg" />
-          </li>
-          <li title="Node.js" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain.svg" />
-          </li>
-          <li title="Tailwind CSS" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
-          </li>
-          <li title="Figma" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
-          </li>
-          <li title="Sass" class="icon">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />
-          </li>
-        </ul>
-
-
-      </div> -->
 
       <section class="pb-4">
     
         <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-5 px-3">
+
           <div class="divs-facilidades d-flex align-items-center">
             <div><i class="bi bi-aspect-ratio fs-1"></i></div>
             <div>
@@ -383,6 +451,57 @@ main{
         </div>
 
       </section>
+
+      <div class="stack">
+
+        <ul class="linguagens">
+          <h3 class="categoria">Linguagens de Progamação</h3>
+          <li title="JavaScript" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
+          </li>
+          <li title="TypeScript" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
+          </li>
+          <li title="Python" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+          </li>
+          <li title="PHP" class="icon">  
+            <i id="php" class="devicon-php-plain colored"></i>
+          </li>
+        </ul>
+        
+        <ul class="frameworks_e_tools">
+          <h3 class="categoria">Frameworks e Ferramentas</h3>
+          <li title="React" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+          </li>
+          <li title="Laravel" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" />
+          </li>
+          <li title="Next.js" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-plain.svg" />
+          </li>
+          <li title="Node.js" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain.svg" />
+          </li>
+          <li title="Bootstrap" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
+          </li>
+          <li title="Tailwind CSS" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+          </li>
+          <li title="Figma" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+          </li>
+          <li title="Sass" class="icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" />
+          </li>
+        </ul>
+      </div>
+
+      <section class="cards" id="cards">
+        <div></div>
+      </section>
     </main>
 
     <footer class="text-center">
@@ -403,6 +522,33 @@ function typeWrite(elemento){
     });
     console.log(textoArray)
 }
+
+function criarCard(urlImg, titulo, paragrafo, link) {
+  const cards = document.getElementById('cards');
+
+  // Criando um novo elemento para cada card
+  const novoCard = document.createElement("div");
+  novoCard.classList.add("cards_card"); // Adiciona classe ao card
+
+  // Definindo o conteúdo do card
+  novoCard.innerHTML = `
+    <div class="cards__card_icon" style="background-image: url('${urlImg}');"></div>
+    <div class="cards__card_icon_text">
+      <h5>${titulo}</h5>
+      <p>${paragrafo}</p>
+      <span><a href="${link}" target="_blank">Saiba mais <i class="bi bi-arrow-right"></i></a></span>
+    </div>
+  `;
+
+  // Adicionando o novo card ao container
+  cards.appendChild(novoCard);
+}
+
+// Chamando a função para criar cards
+criarCard('rocket-takeoff.svg', 'Aplicações Web', 'Aplicação para fácil acesso de links internos e externos mais utilizados por colaboradores da CDA - Distribuidora.', 'https://github.com/joavincus/CDA-Web-Applications');
+
+
+
 
 typeWrite(titulo)
 </script>
